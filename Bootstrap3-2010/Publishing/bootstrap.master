@@ -1,5 +1,5 @@
 <%@Master language="C#"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <%@ Import Namespace="Microsoft.SharePoint" %>
 <%@ Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %> <%@ Register Tagprefix="Utilities" Namespace="Microsoft.SharePoint.Utilities" Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %> <%@ Import Namespace="Microsoft.SharePoint" %> <%@ Assembly Name="Microsoft.Web.CommandUI, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 <%@ Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
@@ -43,8 +43,7 @@
 	
 	<!--bootstrap CSS-->
 	<SharePoint:CssRegistration name="<% $SPUrl:~SiteCollection/Style Library/bootstrap/styles/bootstrap.min.css %>" After="corev4.css" runat="server"/>
-	<SharePoint:CssRegistration name="<% $SPUrl:~SiteCollection/Style Library/bootstrap/styles/bootstrap-responsive.min.css %>" After="<% $SPUrl:~SiteCollection/Style Library/bootstrap/styles/bootstrap.min.css %>" runat="server"/>
-	<SharePoint:CssRegistration name="<% $SPUrl:~SiteCollection/Style Library/bootstrap/styles/bootstrap-custom.css %>" After="<% $SPUrl:~SiteCollection/Style Library/bootstrap/styles/bootstrap-responsive.min.css %>" runat="server"/>
+	<SharePoint:CssRegistration name="<% $SPUrl:~SiteCollection/Style Library/bootstrap/styles/bootstrap-custom.css %>" After="<% $SPUrl:~SiteCollection/Style Library/bootstrap/styles/bootstrap.min.css %>" runat="server"/>
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -222,51 +221,61 @@
 					<div id="pageStatusBar" class="s4-status-s1"></div>
 				</div>
 				<!--title row-->
-				<div class="masthead container-fluid s4-notdlg">
-					<div class="header clearfix">
-						<!--logo-->
-						<div class="pull-left">
-							<SharePoint:SPLinkButton runat="server" NavigateUrl="~site/" id="onetidProjectPropertyTitleGraphic">
-								<SharePoint:SiteLogoImage name="onetidHeadbnnr0" id="onetidHeadbnnr2" LogoImageUrl="/_layouts/images/siteIcon.png" runat="server"/>
-							</SharePoint:SPLinkButton>
-						</div>
-						<!--page title-->
-						<div class="headtitle pull-left">
-							<h1 id="pageTitle" class="ms-core-pageTitle">
-								<asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" runat="server"></asp:ContentPlaceHolder>
-							</h1>
-							<SharePoint:ListSiteMapPath runat="server" SiteMapProviders="CurrentNavigation" RenderCurrentNodeAsLink="true" CssClass="s4-breadcrumb" NodeStyle-CssClass="s4-breadcrumbNode" CurrentNodeStyle-CssClass="s4-breadcrumbCurrentNode" RootNodeStyle-CssClass="s4-breadcrumbRootNode" HideInteriorRootNodes="true" SkipLinkText="" PathSeparator=""></SharePoint:ListSiteMapPath>
-						</div>
-						<!--search-->
-						<div class="searchbox pull-right">
-							<asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server">
-								<SharePoint:DelegateControl ID="DelegateControl4" runat="server" ControlId="SmallSearchInputBox" Version="4"/>
-							</asp:ContentPlaceHolder>
-						</div>
-					</div>
-					<div id="topnavbar" class="navbar navbar-inverse">
-						<div class="navbar-inner">
-							<div class="container">
-								<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</a>
-								<div class="nav-collapse collapse">
-									<!--top nav-->
-									<asp:ContentPlaceHolder id="PlaceHolderTopNavBar" runat="server">
-										<asp:ContentPlaceHolder id="PlaceHolderHorizontalNav" runat="server">
-											<SharePoint:AspMenu ID="TopNavigationMenuV4" Runat="server" EnableViewState="false" DataSourceID="topSiteMap" AccessKey="<%$Resources:wss,navigation_accesskey%>" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Horizontal" StaticDisplayLevels="2" MaximumDynamicDisplayLevels="3" SkipLinkText="" CssClass="s4-tn"/>
-											
-											<!--top navigation delegrate control. Can be overwritten-->
-											<SharePoint:DelegateControl runat="server" ControlId="TopNavigationDataSource" Id="topNavigationDelegate">
-												<Template_Controls>
-													<!--or you can provide your own site map data source to modifcation navigation-->
-													<asp:SiteMapDataSource ShowStartingNode="False" SiteMapProvider="SPNavigationProvider" id="topSiteMap" runat="server" StartingNodeUrl="sid:1002"/>
-												</Template_Controls>
-											</SharePoint:DelegateControl>
+				<div class="masthead s4-notdlg">
+					<div class="container">
+						<div class="row">
+                            <div class="col-md-12">
+								<div class="header clearfix">
+									<!--logo-->
+									<div class="pull-left">
+										<SharePoint:SPLinkButton runat="server" NavigateUrl="~site/" id="onetidProjectPropertyTitleGraphic">
+											<SharePoint:SiteLogoImage name="onetidHeadbnnr0" id="onetidHeadbnnr2" LogoImageUrl="/_layouts/images/siteIcon.png" runat="server"/>
+										</SharePoint:SPLinkButton>
+									</div>
+									<!--page title-->
+									<div class="headtitle pull-left">
+										<h1 id="pageTitle" class="ms-core-pageTitle">
+											<asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" runat="server"></asp:ContentPlaceHolder>
+										</h1>
+										<SharePoint:ListSiteMapPath runat="server" SiteMapProviders="CurrentNavigation" RenderCurrentNodeAsLink="true" CssClass="s4-breadcrumb" NodeStyle-CssClass="s4-breadcrumbNode" CurrentNodeStyle-CssClass="s4-breadcrumbCurrentNode" RootNodeStyle-CssClass="s4-breadcrumbRootNode" HideInteriorRootNodes="true" SkipLinkText="" PathSeparator=""></SharePoint:ListSiteMapPath>
+									</div>
+									<!--search-->
+									<div class="searchbox pull-right">
+										<asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server">
+											<SharePoint:DelegateControl ID="DelegateControl4" runat="server" ControlId="SmallSearchInputBox" Version="4"/>
 										</asp:ContentPlaceHolder>
-									</asp:ContentPlaceHolder>
+									</div>
+								</div>
+                            </div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<div id="topnavbar" class="navbar navbar-inverse">
+									<div class="navbar-inner">
+										<div class="container">
+											<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+											</a>
+											<div class="nav-collapse collapse">
+												<!--top nav-->
+												<asp:ContentPlaceHolder id="PlaceHolderTopNavBar" runat="server">
+													<asp:ContentPlaceHolder id="PlaceHolderHorizontalNav" runat="server">
+														<SharePoint:AspMenu ID="TopNavigationMenuV4" Runat="server" EnableViewState="false" DataSourceID="topSiteMap" AccessKey="<%$Resources:wss,navigation_accesskey%>" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Horizontal" StaticDisplayLevels="2" MaximumDynamicDisplayLevels="3" SkipLinkText="" CssClass="s4-tn"/>
+														
+														<!--top navigation delegrate control. Can be overwritten-->
+														<SharePoint:DelegateControl runat="server" ControlId="TopNavigationDataSource" Id="topNavigationDelegate">
+															<Template_Controls>
+																<!--or you can provide your own site map data source to modifcation navigation-->
+																<asp:SiteMapDataSource ShowStartingNode="False" SiteMapProvider="SPNavigationProvider" id="topSiteMap" runat="server" StartingNodeUrl="sid:1002"/>
+															</Template_Controls>
+														</SharePoint:DelegateControl>
+													</asp:ContentPlaceHolder>
+												</asp:ContentPlaceHolder>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -275,95 +284,106 @@
 				<!--end title row-->
 				
 				<!--page layout-->
-				<div id="mainbody" class="container-fluid">
-					<div class="row-fluid">
-						<!--left panel normally including quick launch bar-->
-						<div id="s4-leftpanel" class="s4-notdlg sidebar-nav well span3">
-							<div id="s4-leftpanel-content">
-								<!--left navigation data source-->
-								<asp:ContentPlaceHolder id="PlaceHolderLeftNavBarDataSource" runat="server" />
-								<!--left bar mini calendar-->
-								<asp:ContentPlaceHolder id="PlaceHolderCalendarNavigator" runat="server" />
-								<!--left bar additional actions like image preview-->
-								<asp:ContentPlaceHolder id="PlaceHolderLeftActions" runat="server" />
-							
-								<!--quick launch placeholder-->
-								<asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" runat="server">
-									<!--start quick launch-->
-									<div class="ms-quicklaunchouter">
-										<div class="ms-quickLaunch">
-											<!--Quick launch nav control -->
-											<Sharepoint:SPNavigationManager id="QuickLaunchNavigationManager" runat="server" QuickLaunchControlId="QuickLaunchMenu" ContainedControl="QuickLaunch" EnableViewState="false" CssClass="ms-quicklaunch-navmgr">
-												<div>
-													<!--Quick Launch data source delegate control. Can override, or provide own sitemap data source-->
-													<SharePoint:DelegateControl runat="server" ControlId="QuickLaunchDataSource">
-														<Template_Controls>
-														
-														
-														
-															<asp:SiteMapDataSource SiteMapProvider="SPNavigationProvider" ShowStartingNode="False" id="QuickLaunchSiteMap" StartingNodeUrl="sid:1025" runat="server" />
-														</Template_Controls>
-													</SharePoint:DelegateControl>
-													<SharePoint:AspMenu id="V4QuickLaunchMenu" runat="server" EnableViewState="false" DataSourceId="QuickLaunchSiteMap" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Vertical" StaticDisplayLevels="2" MaximumDynamicDisplayLevels="2" SkipLinkText="" CssClass="s4-ql" />
-												</div>
-											</Sharepoint:SPNavigationManager>
-											
-											<!--quick launch tree view nav control-->
-											<Sharepoint:SPNavigationManager id="TreeViewNavigationManagerV4" runat="server" ContainedControl="TreeView" CssClass="s4-treeView">
-												<!--link to view lists-->
-												<SharePoint:SPLinkButton runat="server" NavigateUrl="~site/_layouts/viewlsts.aspx" id="idNavLinkSiteHierarchyV4" Text="<%$Resources:wss,treeview_header%>" accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>" CssClass="s4-qlheader" />
+				<div id="main" role="main">
+					<div class="container">
+						<div class="row">
+							<!--left panel normally including quick launch bar-->
+							<div id="s4-leftpanel" class="s4-notdlg sidebar-nav well col-md-3">
+								<div id="s4-leftpanel-content">
+									<!--left navigation data source-->
+									<asp:ContentPlaceHolder id="PlaceHolderLeftNavBarDataSource" runat="server" />
+									<!--left bar mini calendar-->
+									<asp:ContentPlaceHolder id="PlaceHolderCalendarNavigator" runat="server" />
+									<!--left bar additional actions like image preview-->
+									<asp:ContentPlaceHolder id="PlaceHolderLeftActions" runat="server" />
+								
+									<!--quick launch placeholder-->
+									<asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" runat="server">
+										<!--start quick launch-->
+										<div class="ms-quicklaunchouter">
+											<div class="ms-quickLaunch">
+												<!--Quick launch nav control -->
+												<Sharepoint:SPNavigationManager id="QuickLaunchNavigationManager" runat="server" QuickLaunchControlId="QuickLaunchMenu" ContainedControl="QuickLaunch" EnableViewState="false" CssClass="ms-quicklaunch-navmgr">
+													<div>
+														<!--Quick Launch data source delegate control. Can override, or provide own sitemap data source-->
+														<SharePoint:DelegateControl runat="server" ControlId="QuickLaunchDataSource">
+															<Template_Controls>
+															
+															
+															
+																<asp:SiteMapDataSource SiteMapProvider="SPNavigationProvider" ShowStartingNode="False" id="QuickLaunchSiteMap" StartingNodeUrl="sid:1025" runat="server" />
+															</Template_Controls>
+														</SharePoint:DelegateControl>
+														<SharePoint:AspMenu id="V4QuickLaunchMenu" runat="server" EnableViewState="false" DataSourceId="QuickLaunchSiteMap" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Vertical" StaticDisplayLevels="2" MaximumDynamicDisplayLevels="2" SkipLinkText="" CssClass="s4-ql" />
+													</div>
+												</Sharepoint:SPNavigationManager>
 												
-												<div class="ms-treeviewouter">
-													<!-- Tree view data source delegate control that can be overwritten, or you can provide your own datasource-->
-													<SharePoint:DelegateControl runat="server" ControlId="TreeViewAndDataSource">
-														<Template_Controls>
-															<SharePoint:SPHierarchyDataSourceControl runat="server" id="TreeViewDataSourceV4" RootContextObject="Web" IncludeDiscussionFolders="true" />
-															<SharePoint:SPRememberScroll runat="server" id="TreeViewRememberScrollV4" onscroll="javascript:_spRecordScrollPositions(this);" style="overflow: auto;height: 400px;width: 155px; ">
-																<Sharepoint:SPTreeView id="WebTreeViewV4" runat="server" ShowLines="false" DataSourceId="TreeViewDataSourceV4" ExpandDepth="0" SelectedNodeStyle-CssClass="ms-tvselected" NodeStyle-CssClass="ms-navitem" SkipLinkText="" NodeIndent="12" ExpandImageUrl="/_layouts/images/tvclosed.png" ExpandImageUrlRtl="/_layouts/images/tvclosedrtl.png" CollapseImageUrl="/_layouts/images/tvopen.png" CollapseImageUrlRtl="/_layouts/images/tvopenrtl.png" NoExpandImageUrl="/_layouts/images/tvblank.gif" />
-															</Sharepoint:SPRememberScroll>
-														</Template_Controls>
-													</SharePoint:DelegateControl>
-													<!--end tree view data source delegate-->
-												</div>
-											</Sharepoint:SPNavigationManager>
-											<!--end tree view quick launch bar-->
-										
-											<!--bottom of quicklaunch bar, normally recycle bin-->
-											<asp:ContentPlaceHolder id="PlaceHolderQuickLaunchBottom" runat="server">
-												<ul class="s4-specialNavLinkList">
-													<li>
-														<!--recycle link for those with DeleteListItems permissions-->
-														<SharePoint:ClusteredSPLinkButton runat="server" NavigateUrl="~site/_layouts/recyclebin.aspx" ImageClass="s4-specialNavIcon" ImageUrl="/_layouts/images/fgimg.png" ImageWidth=16 ImageHeight=16 OffsetX=0 OffsetY=428 id="idNavLinkRecycleBin" Text="<%$Resources:wss,StsDefault_RecycleBin%>" CssClass="s4-rcycl" PermissionsString="DeleteListItems"/>
-													</li>
-													<li>
-														<SharePoint:ClusteredSPLinkButton id="idNavLinkViewAllV4" runat="server" PermissionsString="ViewFormPages" NavigateUrl="~site/_layouts/viewlsts.aspx" ImageClass="s4-specialNavIcon" ImageUrl="/_layouts/images/fgimg.png" ImageWidth=16 ImageHeight=16 OffsetX=0 OffsetY=0 Text="<%$Resources:wss,quiklnch_allcontent_short%>" accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>"/>
-													</li>
-												</ul>
-											</asp:ContentPlaceHolder>
-											<!--end bottom of quick launch placeholder-->
+												<!--quick launch tree view nav control-->
+												<Sharepoint:SPNavigationManager id="TreeViewNavigationManagerV4" runat="server" ContainedControl="TreeView" CssClass="s4-treeView">
+													<!--link to view lists-->
+													<SharePoint:SPLinkButton runat="server" NavigateUrl="~site/_layouts/viewlsts.aspx" id="idNavLinkSiteHierarchyV4" Text="<%$Resources:wss,treeview_header%>" accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>" CssClass="s4-qlheader" />
+													
+													<div class="ms-treeviewouter">
+														<!-- Tree view data source delegate control that can be overwritten, or you can provide your own datasource-->
+														<SharePoint:DelegateControl runat="server" ControlId="TreeViewAndDataSource">
+															<Template_Controls>
+																<SharePoint:SPHierarchyDataSourceControl runat="server" id="TreeViewDataSourceV4" RootContextObject="Web" IncludeDiscussionFolders="true" />
+																<SharePoint:SPRememberScroll runat="server" id="TreeViewRememberScrollV4" onscroll="javascript:_spRecordScrollPositions(this);" style="overflow: auto;height: 400px;width: 155px; ">
+																	<Sharepoint:SPTreeView id="WebTreeViewV4" runat="server" ShowLines="false" DataSourceId="TreeViewDataSourceV4" ExpandDepth="0" SelectedNodeStyle-CssClass="ms-tvselected" NodeStyle-CssClass="ms-navitem" SkipLinkText="" NodeIndent="12" ExpandImageUrl="/_layouts/images/tvclosed.png" ExpandImageUrlRtl="/_layouts/images/tvclosedrtl.png" CollapseImageUrl="/_layouts/images/tvopen.png" CollapseImageUrlRtl="/_layouts/images/tvopenrtl.png" NoExpandImageUrl="/_layouts/images/tvblank.gif" />
+																</Sharepoint:SPRememberScroll>
+															</Template_Controls>
+														</SharePoint:DelegateControl>
+														<!--end tree view data source delegate-->
+													</div>
+												</Sharepoint:SPNavigationManager>
+												<!--end tree view quick launch bar-->
+											
+												<!--bottom of quicklaunch bar, normally recycle bin-->
+												<asp:ContentPlaceHolder id="PlaceHolderQuickLaunchBottom" runat="server">
+													<ul class="s4-specialNavLinkList">
+														<li>
+															<!--recycle link for those with DeleteListItems permissions-->
+															<SharePoint:ClusteredSPLinkButton runat="server" NavigateUrl="~site/_layouts/recyclebin.aspx" ImageClass="s4-specialNavIcon" ImageUrl="/_layouts/images/fgimg.png" ImageWidth=16 ImageHeight=16 OffsetX=0 OffsetY=428 id="idNavLinkRecycleBin" Text="<%$Resources:wss,StsDefault_RecycleBin%>" CssClass="s4-rcycl" PermissionsString="DeleteListItems"/>
+														</li>
+														<li>
+															<SharePoint:ClusteredSPLinkButton id="idNavLinkViewAllV4" runat="server" PermissionsString="ViewFormPages" NavigateUrl="~site/_layouts/viewlsts.aspx" ImageClass="s4-specialNavIcon" ImageUrl="/_layouts/images/fgimg.png" ImageWidth=16 ImageHeight=16 OffsetX=0 OffsetY=0 Text="<%$Resources:wss,quiklnch_allcontent_short%>" accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>"/>
+														</li>
+													</ul>
+												</asp:ContentPlaceHolder>
+												<!--end bottom of quick launch placeholder-->
+											</div>
 										</div>
-									</div>
-									<!--end quick launch outer container-->
-								</asp:ContentPlaceHolder>
-								<!--quick launch placeholder-->
+										<!--end quick launch outer container-->
+									</asp:ContentPlaceHolder>
+									<!--quick launch placeholder-->
+								</div>
 							</div>
+							<!--end left panel-->
+					
+							<div class="s4-ca s4-ca-dlgNoRibbon col-md-9" id="MSO_ContentTable">
+								<asp:ContentPlaceHolder id="PlaceHolderMain" runat="server" />
+							</div>
+							<!--end primary MSO_ContentTable container-->
 						</div>
-						<!--end left panel-->
-				
-						<div class="s4-ca s4-ca-dlgNoRibbon span9" id="MSO_ContentTable">
-							<asp:ContentPlaceHolder id="PlaceHolderMain" runat="server" />
-						</div>
-						<!--end primary MSO_ContentTable container-->
+						<!--/row-->
 					</div>
-					<!--end row-->
-				
-					<div class="row-fluid s4-notdlg">
-						<footer class="span12">
-							<p>&copy; Company 2013</p>
-						</footer>
-					</div>
+					<!--/container-->
 				</div>
-				<!--container-->
+					<!-- end main -->
+				<div id="footer" class="mastfooter ms-dialogHidden">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>© Company 2013</p>
+                            </div>
+                        </div>
+                        <!--/row-->
+                    </div>
+                    <!--/container-->
+                </div>
+                <!--/mastfooter-->
+				
+				
 			</div>
 			<!-- end s4-bodycontainer-->
 		
