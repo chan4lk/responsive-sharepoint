@@ -1,0 +1,6 @@
+<!--
+Media and Content -> Image Viewer
+-->
+
+Url:
+http://placehold.it/1000x400&text=[Img%201000x400]

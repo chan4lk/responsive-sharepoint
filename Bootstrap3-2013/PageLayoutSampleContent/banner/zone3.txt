@@ -1,0 +1,13 @@
+<!--
+Media and Content -> Content Editor
+-->
+
+Html:
+ <ul class="block-grid three-up"> 
+   <li><a href="#"><img src="http://placehold.it/120x120" alt=""/></a></li> 
+   <li><a href="#"><img src="http://placehold.it/120x120" alt=""/></a></li> 
+   <li><a href="#"><img src="http://placehold.it/120x120" alt=""/></a></li> 
+   <li><a href="#"><img src="http://placehold.it/120x120" alt=""/></a></li> 
+   <li><a href="#"><img src="http://placehold.it/120x120" alt=""/></a></li> 
+   <li><a href="#"><img src="http://placehold.it/120x120" alt=""/></a></li> 
+</ul>

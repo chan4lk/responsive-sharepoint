@@ -1,0 +1,6 @@
+<!--
+Media and Content -> Content Editor
+-->
+
+Html:
+<a href="#" class="btn">Contact Us</a>

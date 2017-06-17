@@ -1,0 +1,8 @@
+<!--
+Media and Content -> Content Editor
+-->
+
+Html:
+<h4>Get In Touch!</h4>
+<hr/> 
+<a href="#"><div align="center" class="btn"><strong>Call To Action!</strong> </div> </a> 

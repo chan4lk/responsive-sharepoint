@@ -1,0 +1,6 @@
+<!--
+Media and Content -> Content Editor
+-->
+
+Html:
+<h4>This is a content section. </h4>

@@ -1,0 +1,7 @@
+<!--
+Media and Content -> Content Editor
+-->
+
+Html:
+<img src="http://placehold.it/250x250&amp;text=Thumbnail" alt=""/> 
+<h6 class="panel">Description</h6>
