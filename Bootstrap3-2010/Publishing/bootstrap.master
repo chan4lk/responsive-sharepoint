@@ -118,7 +118,7 @@
 		<SharePoint:DelegateControl runat="server" ControlId="GlobalNavigation"/>
 
 		<!--Ribbon-->
-		<div id="s4-ribbonrow" class="s4-pr s4-ribbonrowhidetitle">
+		<div id="s4-ribbonrow" class="s4-pr s4-ribbonrow">
 			<div id="s4-ribboncont">
 				<!-- Actual Ribbon control-->
 				<SharePoint:SPRibbon runat="server" PlaceholderElementId="RibbonContainer" CssFile="">
