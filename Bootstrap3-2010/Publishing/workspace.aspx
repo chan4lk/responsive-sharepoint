@@ -15,11 +15,11 @@
 	<SharePointWebControls:FieldValue FieldName="Title" runat="server"/>
 </asp:Content>
 <asp:Content ContentPlaceholderID="PlaceHolderMain" runat="server">
-	<div class="row-fluid">
-		<div class="span12">
+	<div class="row">
+		<div class="col-md-12">
 			<!-- Desktop Slider -->
-			<div class="row-fluid">
-				<div class="span12">
+			<div class="row">
+				<div class="col-md-12">
 					<!-- Main Banner Image - place in a paragraph to enforce the modular scale spacing -->
 					<div class="row-WPZone">
 						<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow1" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
@@ -27,26 +27,26 @@
 				</div>
 			</div>
 			<!-- End Desktop Slider -->
-			<div class="row-fluid">
-				<div class="span12">
-					<div class="row-fluid fourcapimg">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="row fourcapimg">
 						<!-- Thumbnails -->
-						<div class="span3 mobile-two"> 
+						<div class="col-md-3 col-sm-2"> 
 							<div class="row-WPZone">
 								<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow2Column1" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 							</div>
 						</div>
-						<div class="span3 mobile-two">
+						<div class="col-md-3 col-sm-2">
 							<div class="row-WPZone">
 								<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow2Column2" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 							</div>
 						</div>
-						<div class="span3 mobile-two">
+						<div class="col-md-3 col-sm-2">
 							<div class="row-WPZone">
 								<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow2Column3" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 							</div>
 						</div>
-						<div class="span3 mobile-two">
+						<div class="col-md-3 col-sm-2">
 							<div class="row-WPZone">
 								<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow2Column4" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 							</div>
@@ -55,19 +55,19 @@
 					</div>
 				</div>
 			</div>
-			<div class="row-fluid">
-				<div class="span12">
-					<div class="row-fluid">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="row">
 						<!-- Content -->
-						<div class="span8">
+						<div class="col-md-8">
 							<div class="panel radius">
-								<div class="row-fluid">
-									<div class="span6">
+								<div class="row">
+									<div class="col-md-6">
 										<div class="row-WPZone">
 											<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow3Column1" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 										</div>
 									</div>
-									<div class="span6">
+									<div class="col-md-6">
 										<div class="row-WPZone">
 											<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow3Column2" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 										</div>
@@ -75,7 +75,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="span4">
+						<div class="col-md-4">
 							<div class="row-WPZone">
 								<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow3Column3" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 							</div>

@@ -15,16 +15,16 @@
 	<SharePointWebControls:FieldValue FieldName="Title" runat="server"/>
 </asp:Content>
 <asp:Content ContentPlaceholderID="PlaceHolderMain" runat="server">
-	<div class="row-fluid">
+	<div class="row">
 		<!-- Main Blog Content -->
-		<div class="span9">
+		<div class="col-md-9">
 			<div class="row-WPZone">
 				<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow1Column1" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 			</div>
 		</div>
 		<!-- End Main Content -->
 		<!-- Sidebar -->
-		<aside class="span3">
+		<aside class="col-md-3">
 			<div class="row-WPZone">
 				<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow1Column2Sub1" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 			</div>

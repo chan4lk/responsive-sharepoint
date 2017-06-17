@@ -15,8 +15,8 @@
 	<SharePointWebControls:FieldValue FieldName="Title" runat="server"/>
 </asp:Content>
 <asp:Content ContentPlaceholderID="PlaceHolderMain" runat="server">
-	<div class="row-fluid">
-		<div class="span12">  
+	<div class="row">
+		<div class="col-md-12">  
 			<div class="row-WPZone">
 				<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow1Column1" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 			</div>
@@ -24,37 +24,37 @@
 		</div>
 	</div>
 	<!-- Three-up Content Blocks -->
-	<div class="row-fluid">
-		<div class="span4">
+	<div class="row">
+		<div class="col-md-4">
 			<div class="row-WPZone">
 				<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow2Column1" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 			</div>
 		</div>
-		<div class="span4">
+		<div class="col-md-4">
 			<div class="row-WPZone">
 				<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow2Column2" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 			</div>
 		</div>
-		<div class="span4">
+		<div class="col-md-4">
 			<div class="row-WPZone">
 				<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow2Column3" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 			</div>
 		</div>
 	</div>
 	<!-- Call to Action Panel -->
-	<div class="row-fluid">
-		<div class="span12">
+	<div class="row">
+		<div class="col-md-12">
 			<div class="panel">
 				<div class="row-WPZone">
 					<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow3" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 				</div>      
-				<div class="row-fluid">
-					<div class="span9"> 
+				<div class="row">
+					<div class="col-md-9"> 
 						<div class="row-WPZone">
 							<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow3Col1" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 						</div>
 					</div>
-					<div class="span3">  
+					<div class="col-md-3">  
 						<div class="row-WPZone">
 							<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow3Col2" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 						</div>

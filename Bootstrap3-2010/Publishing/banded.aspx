@@ -18,8 +18,8 @@
 	<SharePointWebControls:FieldValue FieldName="Title" runat="server"/>
 </asp:Content>
 <asp:Content ContentPlaceholderID="PlaceHolderMain" runat="server">
-	<div class="row-fluid">
-		<div class="span12">
+	<div class="row">
+		<div class="col-sm-12">
 			<div class="row-WPZone">
 				<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow1Column1" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 			</div>
@@ -27,27 +27,27 @@
 		</div>
 	</div>
 	<!-- Second Band (Image Left with Text) -->
-	<div class="row-fluid">
-		<div class="span4">
+	<div class="row">
+		<div class="col-sm-4">
 			<div class="row-WPZone">
 				<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow2Column1" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 			</div>
 		</div>
-		<div class="span8">
-			<div class="row-fluid">
-				<div class="span12">
+		<div class="col-sm-4">
+			<div class="row">
+				<div class="col-sm-12">
 					<div class="row-WPZone">
 						<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow2Column2" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 					</div>
 				</div>
 			</div>
-			<div class="row-fluid">
-				<div class="span6">
+			<div class="row">
+				<div class="col-sm-6">
 					<div class="row-WPZone">
 						<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow2Column2Sub1" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 					</div>
 				</div>
-				<div class="span6">
+				<div class="col-sm-6">
 					<div class="row-WPZone">
 						<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow2Column2Sub2" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 					</div>
@@ -56,13 +56,13 @@
 		</div>
 	</div>
 	<!-- Third Band (Image Right with Text) -->
-	<div class="row-fluid">
-		<div class="span8">
+	<div class="row">
+		<div class="col-sm-8">
 			<div class="row-WPZone">
 				<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow3Column1" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 			</div>
 		</div>
-		<div class="span4">
+		<div class="col-sm-4">
 			<div class="row-WPZone">
 				<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow3Column2" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 			</div>

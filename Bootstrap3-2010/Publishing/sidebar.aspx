@@ -18,14 +18,14 @@
 	<SharePointWebControls:FieldValue FieldName="Title" runat="server"/>
 </asp:Content>
 <asp:Content ContentPlaceholderID="PlaceHolderMain" runat="server">
-	<div class="row-fluid">
-		<div class="span3 ">
+	<div class="row">
+		<div class="col-md-3 ">
 			<div class="row-WPZone">
 				<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow1Column1" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 			</div>
 		</div>
 		<!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
-		<div class="span9">
+		<div class="col-md-9">
 			<div class="row-WPZone">
 				<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="bootstrapRow1Column2" FrameType="None" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
 			</div>
