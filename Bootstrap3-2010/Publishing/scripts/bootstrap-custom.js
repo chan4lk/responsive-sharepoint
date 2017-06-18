@@ -93,7 +93,8 @@ function BindBodySpans() {
 		}
 	}
 	if (bHideLeftNav) {
-		$j('#MSO_ContentTable').removeClass('span9').addClass('span12').css({'margin-left':'0px'});
+		$j('#MSO_ContentTable').removeClass('col-md-9').addClass('col-md-12').css({'margin-left':'0px'});
+		$j('#MSO_ContentTable').removeClass('col-sm-9').addClass('col-sm-12').css({'margin-left':'0px'});
 		$j('#s4-leftpanel').css({'display':'none'});
 	}
 }

@@ -49,7 +49,7 @@
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-	<SharePoint:ScriptLink language="javascript" name="~SiteCollection/Style Library/bootstrap/scripts/jquery-1.8.3.min.js" runat="server"/>	
+	<SharePoint:ScriptLink language="javascript" name="~SiteCollection/Style Library/bootstrap/scripts/jquery-3.2.1.min.js" runat="server"/>	
 	<SharePoint:ScriptLink language="javascript" name="~SiteCollection/Style Library/bootstrap/scripts/bootstrap.min.js" runat="server"/>
 	<SharePoint:ScriptLink language="javascript" name="~SiteCollection/Style Library/bootstrap/scripts/jquery.dragdrop.js" runat="server"/>	
 	<SharePoint:ScriptLink language="javascript" name="~SiteCollection/Style Library/bootstrap/scripts/bootstrap-custom.js" runat="server"/>
@@ -224,7 +224,7 @@
 				<div class="masthead s4-notdlg">
 					<div class="container">
 						<div class="row">
-                            <div class="col-md-12">
+                            <div class="col-sm-12">
 								<div class="header clearfix">
 									<!--logo-->
 									<div class="pull-left">
@@ -250,15 +250,19 @@
 						</div>
 						<div class="row">
 							<div class="col-sm-12">
-								<div id="topnavbar" class="navbar navbar-inverse">
-									<div class="navbar-inner">
-										<div class="container">
-											<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+								<nav id="topnavbar" class="navbar navbar-default">
+									<div class="container-fluid">
+										<div class="navbar-header">
+											<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-1" aria-expanded="false">
+												<span class="sr-only">Toggle navigation</span>
 												<span class="icon-bar"></span>
 												<span class="icon-bar"></span>
 												<span class="icon-bar"></span>
-											</a>
-											<div class="nav-collapse collapse">
+											</button>
+											<a class="navbar-brand" href="#">Brand</a>
+										</div>
+										<div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
+											<div class="nav navbar-nav">
 												<!--top nav-->
 												<asp:ContentPlaceHolder id="PlaceHolderTopNavBar" runat="server">
 													<asp:ContentPlaceHolder id="PlaceHolderHorizontalNav" runat="server">
@@ -276,7 +280,7 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</nav>
 							</div>
 						</div>
 					</div>
@@ -373,7 +377,7 @@
 				<div id="footer" class="mastfooter ms-dialogHidden">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-sm-12">
                                 <p>© Company 2013</p>
                             </div>
                         </div>
